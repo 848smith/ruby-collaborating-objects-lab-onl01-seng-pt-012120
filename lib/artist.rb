@@ -19,14 +19,13 @@ class Artist
   end
   
   def self.find(name)
-    @@artist.find do |artist|
+    @@all.find do |artist|
       artist.name == name
     end
   end
   
   def self.create(name)
     artist = self.new(name)
-    @@artist << artist
     artist
   end
   
